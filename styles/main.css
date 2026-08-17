@@ -7548,3 +7548,363 @@ img {
     font-size: .9rem;
   }
 }
+
+/* ==========================================================================
+   Modern refresh — restyling layer over the template.
+   Structure and content are untouched; this only changes how it looks.
+   ========================================================================== */
+
+:root {
+  --bg: #fbfaf9;
+  --surface: #ffffff;
+  --ink: #16181c;
+  --ink-2: #565b64;
+  --ink-3: #8b9099;
+  --line: #e8e6e1;
+  --accent: #1f6f5c;
+  --accent-deep: #123a4d;
+  --accent-soft: #eef4f1;
+  --radius: 14px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  letter-spacing: -0.003em;
+}
+
+/* Tighter, more confident headings. */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.title, .navbar-brand {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: -0.022em;
+}
+
+/* Section headings become quiet uppercase labels rather than shouty titles. */
+.section .h4.title.text-center {
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 2rem !important;
+}
+
+.card-body .h4.title {
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 1.1rem;
+}
+
+/* Cards: hairline borders instead of heavy drop shadows. */
+.card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, .04);
+  background-color: var(--surface);
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+
+.cc-experience .card {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.cc-experience .card:hover {
+  border-color: #d6d2ca;
+  box-shadow: 0 6px 24px rgba(16, 24, 40, .06);
+}
+
+.card-body {
+  padding: 1.75rem;
+}
+
+/* Flatten the green date/company column and let the type do the work. */
+.cc-experience .card .bg-primary,
+.card .bg-primary {
+  background-color: var(--accent-deep) !important;
+  background-image: none !important;
+}
+
+.cc-experience-header p {
+  margin-bottom: .35rem;
+  font-size: .74rem;
+  font-weight: 500;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .68);
+}
+
+.cc-experience-header .h5 {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Role titles and body copy. */
+.card-body .h5 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.card-body p {
+  color: var(--ink-2);
+}
+
+.card-body ul {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.card-body li {
+  position: relative;
+  padding-left: 1.05rem;
+  margin-bottom: .5rem;
+  color: var(--ink-2);
+  font-size: .93rem;
+  line-height: 1.6;
+}
+
+.card-body li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .72em;
+  width: 5px;
+  height: 1px;
+  background-color: var(--ink-3);
+}
+
+.card-body li b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Hero: shorter, calmer, no parallax jitter. */
+.page-header.page-header-small {
+  min-height: 68vh;
+  max-height: 720px;
+}
+
+.page-header .content-center .h2.title {
+  font-size: clamp(2.4rem, 6vw, 3.4rem);
+  font-weight: 600;
+  letter-spacing: -.03em;
+  margin-bottom: .35rem;
+}
+
+.page-header .content-center .category {
+  font-size: .82rem;
+  font-weight: 500;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .8) !important;
+  margin-bottom: 1.75rem;
+}
+
+/* Profile photo: drop the pulsing ring, keep a clean static edge. */
+.cc-profile-image a:before {
+  display: none;
+}
+
+.cc-profile-image img {
+  border: 0;
+  width: 148px;
+  height: 148px;
+  object-fit: cover;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, .22), 0 18px 40px rgba(0, 0, 0, .22);
+}
+
+.cc-profile-image a:hover img {
+  transform: scale(1.03, 1.03);
+}
+
+/* Buttons: flat pills. */
+.btn,
+.btn-primary,
+.navbar .btn {
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: .88rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  border: 0;
+  box-shadow: none;
+  transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease;
+}
+
+.page-header .btn-primary {
+  background-color: #fff !important;
+  background-image: none !important;
+  color: var(--accent-deep) !important;
+  padding: .8rem 1.6rem;
+}
+
+.page-header .btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .18);
+  background-color: #fff !important;
+}
+
+.button-container .btn-icon {
+  background-color: rgba(255, 255, 255, .14) !important;
+  border: 1px solid rgba(255, 255, 255, .3) !important;
+  color: #fff !important;
+}
+
+.button-container .btn-icon:hover {
+  background-color: rgba(255, 255, 255, .26) !important;
+}
+
+/* Navbar: slimmer with a blur once it goes solid. */
+.navbar {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.navbar .navbar-brand {
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.navbar:not(.navbar-transparent) {
+  background-color: rgba(255, 255, 255, .82) !important;
+  backdrop-filter: saturate(180%) blur(14px);
+  box-shadow: 0 1px 0 var(--line);
+}
+
+.navbar .nav-link {
+  font-size: .84rem !important;
+  font-weight: 500 !important;
+  letter-spacing: .01em;
+  text-transform: none !important;
+}
+
+/* Basic Information rows. */
+#about .row .col-sm-4 strong {
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .11em;
+  color: var(--ink-3);
+}
+
+#about .col-sm-8 {
+  color: var(--ink-2);
+  font-size: .93rem;
+}
+
+#about .col-sm-8 a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-soft);
+}
+
+/* Refine the custom components added earlier. */
+.cc-role-group,
+.cc-skill-group {
+  color: var(--ink-3);
+}
+
+.cc-role-group {
+  font-size: .66rem;
+  letter-spacing: .14em;
+}
+
+.cc-skill-group {
+  font-size: .66rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.cc-tag {
+  border: 1px solid var(--line);
+  background-color: #fafaf8;
+  color: var(--ink-2);
+  font-size: .79rem;
+  font-weight: 400;
+  padding: .34rem .78rem;
+}
+
+.cc-lang {
+  border-bottom: 1px solid var(--line);
+}
+
+.cc-lang-name {
+  font-weight: 500;
+}
+
+.cc-cefr {
+  background-color: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Language switcher tuned to the new palette. */
+.navbar:not(.navbar-transparent) .cc-lang-switch button.active {
+  background-color: var(--accent-deep);
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.footer {
+  border-top: 1px solid var(--line);
+  background-color: transparent;
+}
+
+.footer p {
+  font-size: .8rem;
+  color: var(--ink-3);
+}
+
+.footer .credit {
+  color: var(--ink-3);
+}
+
+/* Visible keyboard focus, which the template lacked entirely. */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+@media (max-width: 767px) {
+  .card-body { padding: 1.35rem; }
+  .section { padding: 44px 0; }
+  .page-header.page-header-small { min-height: 72vh; }
+  .cc-profile-image img { width: 132px; height: 132px; }
+}
+
+/* Print: a clean one-off CV rather than a screenshot of a website. */
+@media print {
+  .navbar, .button-container, .page-header-image, .footer, .btn { display: none !important; }
+  body { background: #fff; font-size: 11pt; }
+  .card { border: 0; box-shadow: none; page-break-inside: avoid; }
+  .card .bg-primary { background: none !important; color: #000 !important; }
+  .cc-experience-header p, .cc-experience-header .h5 { color: #000 !important; }
+  .section { padding: 12px 0; }
+}
