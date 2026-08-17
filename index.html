@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Silvia Numa</title>
+    <title>Silvia Numa — Customer Experience Specialist</title>
+    <meta name="description" content="Silvia Numa — Customer Experience Specialist with 5+ years in e-commerce and marketplace operations. Multilingual support across Italian, English and Spanish.">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Silvia Numa — Customer Experience Specialist">
+    <meta property="og:description" content="Customer Experience Specialist with 5+ years in e-commerce and marketplace operations. Multilingual support across Italian, English and Spanish.">
+    <meta property="og:url" content="https://silvianuma.github.io/">
+    <meta property="og:image" content="https://silvianuma.github.io/images/silvia.jpg">
+    <meta name="twitter:card" content="summary">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/aos.css" rel="stylesheet">
@@ -33,6 +41,8 @@
               <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Work Experience</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skills">Skills</a></li>
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">Languages</a></li>
               </ul>
             </div>
@@ -45,7 +55,7 @@
 <div class="profile-page">
   <div class="wrapper">
     <div class="page-header page-header-small" filter-color="green">
-      <div class="page-header-image" data-parallax="true" style="background-image: url('images/london.jpg');"></div>
+      <div class="page-header-image" style="background-image: linear-gradient(135deg, #123a4d 0%, #1f6f5c 55%, #2f9e73 100%);"></div>
       <div class="container">
         <div class="content-center">
           <div class="cc-profile-image"><a><img src="images/silvia.jpg" alt="Image"/></a></div>
@@ -56,7 +66,7 @@
       </div>
       <div class="section">
         <div class="container">
-          <div class="button-container"><a class="btn btn-default btn-round btn-lg btn-icon" href="mailto:silvianuma@gmail.com" rel="tooltip" title="Send me an Email"><i class="fa fa-google"></i></a><a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.linkedin.com/in/silvia-numa-b6291b194/" rel="tooltip" title="Get in touch on LinkedIn"><i class="fa fa-linkedin"></i></a><a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.facebook.com/silvia.numa" rel="tooltip" title="Get in touch on Facebook"><i class="fa fa-facebook"></i></a></div>
+          <div class="button-container"><a class="btn btn-default btn-round btn-lg btn-icon" href="mailto:silvianuma@gmail.com" rel="tooltip" title="Send me an Email"><i class="fa fa-google"></i></a><a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.linkedin.com/in/silvia-numa-b6291b194/" rel="tooltip" title="Get in touch on LinkedIn"><i class="fa fa-linkedin"></i></a></div>
         </div>
       </div>
     </div>
@@ -70,12 +80,15 @@
           <div class="card-body">
             <div class="h4 mt-0 title">About</div>
             <p>Hello! I am Silvia.</p>
-            <p>I am a friendly and spontaneous person with good communication
-skills and a constantly positive outlook to learn new skills, meet new
-people and achieve fulfilling results.</p>
-<p>I am hard working with a high sense of
-responsibility and organisation and I enjoy teamwork and busy
-environments. </p>
+            <p>Customer Experience Specialist with 5+ years in e-commerce and
+marketplace operations, currently at FiloBlu. I manage the full order
+lifecycle — from pre-sale enquiry through shipping, customs, returns and
+chargebacks — across voice, email and live chat for international fashion
+and retail brands.</p>
+            <p>I work in Italian, English and Spanish, which lets me support
+customers and brand teams across markets directly. I am most useful where
+operations are messy: escalations, cross-team process gaps, and turning
+recurring complaints into fixes rather than tickets.</p>
           </div>
         </div>
         <div class="col-lg-6 col-md-12">
@@ -83,13 +96,20 @@ environments. </p>
             <div class="h4 mt-0 title">Basic Information</div>
             <div class="row">
               <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
-              <div class="col-sm-8" id='age'>
-                <script type="text/javascript">
-                  var bday = new Date(1990,1,16).getTime();
-                  var diff = Date.now()-bday;
-                  document.write(Math.floor(diff/(1000*60*60*24*365)));
-                </script>
-              </div>
+              <div class="col-sm-8" id="age"></div>
+              <script type="text/javascript">
+                (function () {
+                  // Birth date: 16 February 1990 (month is 0-indexed in JS).
+                  var bday = new Date(1990, 1, 16);
+                  var now = new Date();
+                  var age = now.getFullYear() - bday.getFullYear();
+                  var monthDiff = now.getMonth() - bday.getMonth();
+                  if (monthDiff < 0 || (monthDiff === 0 && now.getDate() < bday.getDate())) {
+                    age--;
+                  }
+                  document.getElementById('age').textContent = age;
+                })();
+              </script>
             </div>
             <div class="row mt-3">
               <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
@@ -123,29 +143,34 @@ environments. </p>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
             <div class="h5"><b>Customer Experience Specialist</b></div>
+            <p class="cc-role-group">Customer Support</p>
             <ul>
               <li>
-                Managing end-to-end Customer Experience and Customer Service operations within e-commerce and marketplace environments.
+                Managing end-to-end Customer Experience and Customer Service operations across the full order lifecycle — order management, shipping, customs, returns, refunds and post-purchase assistance.
               </li>
-              <li>Providing comprehensive customer support throughout the entire order lifecycle, including order management, shipping, customs, returns, refunds, and post-purchase assistance.
+              <li>Delivering multichannel support via voice, email and live chat, ensuring a consistent and customer-centric experience across all touchpoints.
               </li>
-              <li>Delivering high-quality, multichannel customer support via voice, email, and live chat, ensuring a consistent and customer-centric experience across all touchpoints.
-              </li>
-              <li>Handling complex customer inquiries, complaints, escalations, and service-related issues, identifying effective solutions while maintaining high service standards.
-              </li>
-              <li>Managing customer service activities across major marketplaces, including Amazon and Zalando.
-              </li>
-              <li>Working closely with internal departments, Store Managers, and brand teams to streamline processes, resolve operational issues, and ensure a consistent brand experience.
-              </li>
-              <li>Strong problem-solving and analytical skills to address customer needs, improve service quality, and contribute to continuous process optimization.
-              </li>
-              <li>Supporting payment operations and fraud-prevention activities, including payment verification, disputes, and chargeback management across Klarna, PayPal, and Adyen.
+              <li>Handling complex customer inquiries, complaints, escalations and service-related issues, identifying effective solutions while maintaining high service standards.
               </li>
               <li>Providing translation and multilingual support to facilitate effective communication with international customers and stakeholders.
               </li>
+            </ul>
+            <p class="cc-role-group">Marketplaces &amp; Payments</p>
+            <ul>
+              <li>Managing customer service activities across major marketplaces, including Amazon and Zalando.
+              </li>
+              <li>Supporting payment operations and fraud-prevention activities, including payment verification, disputes and chargeback management across Klarna, PayPal and Adyen.
+              </li>
               <li>Managing social media moderation and supporting web reputation management for selected brands, ensuring timely and appropriate responses to customer feedback and online interactions.
               </li>
-              <li>Preparing and analyzing monthly performance reports, monitoring key activities and providing insights on the performance of assigned projects.
+            </ul>
+            <p class="cc-role-group">Reporting &amp; Process Improvement</p>
+            <ul>
+              <li>Preparing and analysing monthly performance reports, monitoring key activities and providing insights on the performance of assigned projects.
+              </li>
+              <li>Identifying recurring complaint drivers from monthly reporting and proposing process changes to reduce repeat contacts.
+              </li>
+              <li>Working closely with internal departments, Store Managers and brand teams to streamline processes, resolve operational issues and ensure a consistent brand experience.
               </li>
             </ul>
           </div>
@@ -189,7 +214,7 @@ environments. </p>
         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body cc-experience-header">
             <p>August 2017 - August 2019</p>
-            <div class="h5">Entoeca Da Luca</div>
+            <div class="h5">Enoteca Da Luca</div>
           </div>
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
@@ -289,7 +314,7 @@ environments. </p>
     </div>
   </div>
 </div>
-<div class="section">
+<div class="section" id="education">
   <div class="container cc-experience">
     <div class="h4 text-center mb-4 title">Education</div>
     <div class="card">
@@ -316,40 +341,45 @@ environments. </p>
     </div>
   </div>
 </div>
-<div class="section" id="skill">
+<div class="section" id="skills">
   <div class="container">
-    <div class="h4 text-center mb-4 title">Languages</div>
+    <div class="h4 text-center mb-4 title">Skills</div>
     <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <div class="card-body">
         <div class="row">
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">Italian</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div><span class="progress-value">Native</span>
-              </div>
+          <div class="col-md-4">
+            <div class="h6 cc-skill-group">Customer Experience</div>
+            <div class="cc-tags">
+              <span class="cc-tag">Order Management</span>
+              <span class="cc-tag">Returns &amp; Refunds</span>
+              <span class="cc-tag">Shipping &amp; Customs</span>
+              <span class="cc-tag">Escalation Management</span>
+              <span class="cc-tag">Complaint Handling</span>
+              <span class="cc-tag">Voice, Email &amp; Live Chat</span>
+              <span class="cc-tag">Post-purchase Support</span>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">English</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div><span class="progress-value">Fluent</span>
-              </div>
+          <div class="col-md-4">
+            <div class="h6 cc-skill-group">Marketplaces &amp; Payments</div>
+            <div class="cc-tags">
+              <span class="cc-tag">Amazon</span>
+              <span class="cc-tag">Zalando</span>
+              <span class="cc-tag">Klarna</span>
+              <span class="cc-tag">PayPal</span>
+              <span class="cc-tag">Adyen</span>
+              <span class="cc-tag">Chargebacks &amp; Disputes</span>
+              <span class="cc-tag">Fraud Prevention</span>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">Spanish</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div><span class="progress-value">Fluent</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">French</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div><span class="progress-value">Beginner</span>
-              </div>
+          <div class="col-md-4">
+            <div class="h6 cc-skill-group">Operations &amp; Communication</div>
+            <div class="cc-tags">
+              <span class="cc-tag">Performance Reporting</span>
+              <span class="cc-tag">Process Improvement</span>
+              <span class="cc-tag">Social Media Moderation</span>
+              <span class="cc-tag">Web Reputation Management</span>
+              <span class="cc-tag">Translation &amp; Localisation</span>
+              <span class="cc-tag">Cross-team Collaboration</span>
             </div>
           </div>
         </div>
@@ -357,10 +387,49 @@ environments. </p>
     </div>
   </div>
 </div>
+<div class="section" id="skill">
+  <div class="container">
+    <div class="h4 text-center mb-4 title">Languages</div>
+    <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="cc-lang">
+              <span class="cc-lang-name">Italian</span>
+              <span class="cc-lang-level">Native <span class="cc-cefr">C2</span></span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="cc-lang">
+              <span class="cc-lang-name">English</span>
+              <span class="cc-lang-level">Fluent <span class="cc-cefr">C1</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="cc-lang">
+              <span class="cc-lang-name">Spanish</span>
+              <span class="cc-lang-level">Fluent <span class="cc-cefr">DELE B2</span></span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="cc-lang">
+              <span class="cc-lang-name">French</span>
+              <span class="cc-lang-level">Beginner <span class="cc-cefr">A2</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
     </div>
     <footer class="footer">
       <div class="text-center text-muted">
-        <p>&copy; Creative CV. All rights reserved.<br>Design - <a class="credit" href="https://templateflip.com" target="_blank">TemplateFlip</a></p>
+        <p>&copy; <span id="year"></span> Silvia Numa.<br>Design - <a class="credit" href="https://templateflip.com" target="_blank" rel="noopener">TemplateFlip</a></p>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
       </div>
     </footer>
     <script src="js/core/jquery.3.2.1.min.js"></script>

@@ -7273,3 +7273,74 @@ a.credit {
 .section {
   padding-bottom: 0;
 }
+
+/* ---- Custom additions: skill tags, role groups, language levels ---- */
+
+.cc-role-group {
+  margin-bottom: .25rem;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #2f9e73;
+}
+
+.cc-role-group:not(:first-of-type) {
+  margin-top: 1.25rem;
+}
+
+.cc-skill-group {
+  margin-bottom: .75rem;
+  font-weight: 700;
+  color: #2f9e73;
+}
+
+.cc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+
+.cc-tag {
+  display: inline-block;
+  padding: .3rem .7rem;
+  border: 1px solid rgba(47, 158, 115, .35);
+  border-radius: 999px;
+  background-color: rgba(47, 158, 115, .08);
+  font-size: .78rem;
+  line-height: 1.4;
+  color: #2c2c2c;
+}
+
+.cc-skill-group + .cc-tags {
+  margin-bottom: 1.5rem;
+}
+
+.cc-lang {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: .65rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .07);
+}
+
+.cc-lang-name {
+  font-weight: 700;
+}
+
+.cc-lang-level {
+  color: #6c757d;
+  font-size: .9rem;
+}
+
+.cc-cefr {
+  display: inline-block;
+  margin-left: .35rem;
+  padding: .15rem .45rem;
+  border-radius: 4px;
+  background-color: rgba(47, 158, 115, .12);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: #2f9e73;
+}
