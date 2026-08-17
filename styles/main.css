@@ -7344,3 +7344,196 @@ a.credit {
   letter-spacing: .04em;
   color: #2f9e73;
 }
+
+/* ---- Language switcher ---- */
+
+.cc-nav-right {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.cc-lang-switch {
+  display: inline-flex;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-radius: 999px;
+}
+
+.cc-lang-switch button {
+  min-width: 44px;
+  min-height: 34px;
+  padding: .3rem .7rem;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.cc-lang-switch button + button {
+  border-left: 1px solid rgba(255, 255, 255, .35);
+}
+
+.cc-lang-switch button:hover {
+  background-color: rgba(255, 255, 255, .18);
+}
+
+.cc-lang-switch button.active {
+  background-color: #fff;
+  color: #1f6f5c;
+}
+
+/* Once the navbar turns solid white on scroll, flip the switcher to dark ink. */
+.navbar:not(.navbar-transparent) .cc-lang-switch {
+  border-color: rgba(47, 158, 115, .55);
+}
+
+.navbar:not(.navbar-transparent) .cc-lang-switch button {
+  color: #2f9e73;
+}
+
+.navbar:not(.navbar-transparent) .cc-lang-switch button + button {
+  border-left-color: rgba(47, 158, 115, .35);
+}
+
+.navbar:not(.navbar-transparent) .cc-lang-switch button.active {
+  background-color: #2f9e73;
+  color: #fff;
+}
+
+/* ---- Mobile polish ---- */
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 991px) {
+  .navbar-translate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-header.page-header-small {
+    min-height: 78vh;
+  }
+
+  .cc-profile-image img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+  }
+
+  .content-center .h2.title {
+    font-size: 1.9rem;
+  }
+
+  .content-center .category {
+    font-size: .85rem;
+    letter-spacing: .02em;
+  }
+
+  /* Company/date band reads as a header strip above the bullets, not a stray
+     blue block with desktop-sized padding. */
+  .cc-experience .card .col-md-3.bg-primary {
+    border-radius: 6px 6px 0 0;
+  }
+
+  .cc-experience-header {
+    padding: 1rem 1.25rem .85rem;
+    text-align: left;
+  }
+
+  .cc-experience-header p {
+    margin-bottom: .2rem;
+    font-size: .78rem;
+    letter-spacing: .04em;
+    opacity: .9;
+  }
+
+  .cc-experience-header .h5 {
+    margin: 0;
+    font-size: 1.05rem;
+  }
+
+  .cc-experience .card .col-md-9 .card-body {
+    padding: 1.25rem;
+  }
+
+  .card-body ul {
+    margin-bottom: 0;
+    padding-left: 1.1rem;
+  }
+
+  .card-body li {
+    margin-bottom: .55rem;
+    font-size: .92rem;
+    line-height: 1.55;
+  }
+
+  .section {
+    padding: 45px 0;
+  }
+
+  .h4.title {
+    font-size: 1.3rem;
+  }
+
+  /* Skill groups need breathing room once the three columns stack. */
+  .cc-skill-group {
+    margin-top: 1.25rem;
+  }
+
+  .col-md-4:first-child .cc-skill-group {
+    margin-top: 0;
+  }
+
+  .cc-skill-group + .cc-tags {
+    margin-bottom: .5rem;
+  }
+
+  .cc-tag {
+    font-size: .74rem;
+  }
+
+  .cc-lang {
+    padding: .8rem 0;
+  }
+
+  .button-container .btn-icon {
+    margin: 0 .3rem;
+  }
+
+  .footer {
+    padding: 24px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .cc-lang-switch button {
+    min-width: 38px;
+    padding: .3rem .5rem;
+    font-size: .68rem;
+  }
+
+  .navbar-brand {
+    font-size: .9rem;
+  }
+}

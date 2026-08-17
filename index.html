@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Silvia Numa — Customer Experience Specialist</title>
     <meta name="description" content="Silvia Numa — Customer Experience Specialist with 5+ years in e-commerce and marketplace operations. Multilingual support across Italian, English and Spanish.">
+    <meta name="theme-color" content="#1f6f5c">
     <link rel="icon" href="favicon.ico">
     <meta property="og:type" content="profile">
     <meta property="og:title" content="Silvia Numa — Customer Experience Specialist">
@@ -13,7 +14,7 @@
     <meta property="og:url" content="https://silvianuma.github.io/">
     <meta property="og:image" content="https://silvianuma.github.io/images/silvia.jpg">
     <meta name="twitter:card" content="summary">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/aos.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,16 +35,23 @@
       <div class="profile-page sidebar-collapse">
         <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
           <div class="container">
-            <div class="navbar-translate"><a class="navbar-brand" href="#" rel="tooltip">Curriculum Vitae</a>
-              <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span></button>
+            <div class="navbar-translate"><a class="navbar-brand" href="#" rel="tooltip" data-i18n="nav.brand">Curriculum Vitae</a>
+              <div class="cc-nav-right">
+                <div class="cc-lang-switch" role="group" aria-label="Language">
+                  <button type="button" data-lang="en" aria-pressed="true">EN</button>
+                  <button type="button" data-lang="it" aria-pressed="false">IT</button>
+                  <button type="button" data-lang="es" aria-pressed="false">ES</button>
+                </div>
+                <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span></button>
+              </div>
             </div>
             <div class="collapse navbar-collapse justify-content-end" id="navigation">
               <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Work Experience</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#education">Education</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">Languages</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#about" data-i18n="nav.about">About</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience" data-i18n="nav.experience">Work Experience</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#education" data-i18n="nav.education">Education</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skills" data-i18n="nav.skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill" data-i18n="nav.languages">Languages</a></li>
               </ul>
             </div>
           </div>
@@ -58,10 +66,10 @@
       <div class="page-header-image" style="background-image: linear-gradient(135deg, #123a4d 0%, #1f6f5c 55%, #2f9e73 100%);"></div>
       <div class="container">
         <div class="content-center">
-          <div class="cc-profile-image"><a><img src="images/silvia.jpg" alt="Image"/></a></div>
+          <div class="cc-profile-image"><a><img src="images/silvia.jpg" width="518" height="600" alt="Silvia Numa"/></a></div>
           <div class="h2 title">Silvia Numa</div>
-          <!--<p class="category text-white">Subtitles</p>-->
-          <a class="btn btn-primary" href="images/silvia_numa_cv.pdf" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Download CV</a>
+          <p class="category text-white" data-i18n="filoblu.role">Customer Experience Specialist</p>
+          <a class="btn btn-primary" href="images/silvia_numa_cv.pdf" data-aos="zoom-in" data-aos-anchor="data-aos-anchor" data-i18n="hero.download">Download CV</a>
         </div>
       </div>
       <div class="section">
@@ -78,50 +86,30 @@
       <div class="row">
         <div class="col-lg-6 col-md-12">
           <div class="card-body">
-            <div class="h4 mt-0 title">About</div>
-            <p>Hello! I am Silvia.</p>
-            <p>Customer Experience Specialist with 5+ years in e-commerce and
-marketplace operations, currently at FiloBlu. I manage the full order
-lifecycle — from pre-sale enquiry through shipping, customs, returns and
-chargebacks — across voice, email and live chat for international fashion
-and retail brands.</p>
-            <p>I work in Italian, English and Spanish, which lets me support
-customers and brand teams across markets directly. I am most useful where
-operations are messy: escalations, cross-team process gaps, and turning
-recurring complaints into fixes rather than tickets.</p>
+            <div class="h4 mt-0 title" data-i18n="about.title">About</div>
+            <p data-i18n="about.hello">Hello! I am Silvia.</p>
+            <p data-i18n="about.p1">Customer Experience Specialist with 5+ years in e-commerce and marketplace operations, currently at FiloBlu. I manage the full order lifecycle — from pre-sale enquiry through shipping, customs, returns and chargebacks — across voice, email and live chat for international fashion and retail brands.</p>
+            <p data-i18n="about.p2">I work in Italian, English and Spanish, which lets me support customers and brand teams across markets directly. I am most useful where operations are messy: escalations, cross-team process gaps, and turning recurring complaints into fixes rather than tickets.</p>
           </div>
         </div>
         <div class="col-lg-6 col-md-12">
           <div class="card-body">
-            <div class="h4 mt-0 title">Basic Information</div>
+            <div class="h4 mt-0 title" data-i18n="info.title">Basic Information</div>
             <div class="row">
-              <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
+              <div class="col-sm-4"><strong class="text-uppercase" data-i18n="info.age">Age:</strong></div>
               <div class="col-sm-8" id="age"></div>
-              <script type="text/javascript">
-                (function () {
-                  // Birth date: 16 February 1990 (month is 0-indexed in JS).
-                  var bday = new Date(1990, 1, 16);
-                  var now = new Date();
-                  var age = now.getFullYear() - bday.getFullYear();
-                  var monthDiff = now.getMonth() - bday.getMonth();
-                  if (monthDiff < 0 || (monthDiff === 0 && now.getDate() < bday.getDate())) {
-                    age--;
-                  }
-                  document.getElementById('age').textContent = age;
-                })();
-              </script>
             </div>
             <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
-              <div class="col-sm-8">silvianuma@gmail.com</div>
+              <div class="col-sm-4"><strong class="text-uppercase" data-i18n="info.email">Email:</strong></div>
+              <div class="col-sm-8"><a href="mailto:silvianuma@gmail.com">silvianuma@gmail.com</a></div>
             </div>
             <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Language:</strong></div>
-              <div class="col-sm-8">Italian, English, Spanish, French</div>
+              <div class="col-sm-4"><strong class="text-uppercase" data-i18n="info.language">Language:</strong></div>
+              <div class="col-sm-8" data-i18n="info.languageValue">Italian, English, Spanish, French</div>
             </div>
             <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Location:</strong></div>
-              <div class="col-sm-8">Currently in Italy.</div>
+              <div class="col-sm-4"><strong class="text-uppercase" data-i18n="info.location">Location:</strong></div>
+              <div class="col-sm-8" data-i18n="info.locationValue">Currently in Italy.</div>
             </div>
           </div>
         </div>
@@ -131,47 +119,36 @@ recurring complaints into fixes rather than tickets.</p>
 </div>
 <div class="section" id="experience">
   <div class="container cc-experience">
-    <div class="h4 text-center mb-4 title">Work Experience</div>
+    <div class="h4 text-center mb-4 title" data-i18n="exp.title">Work Experience</div>
     <div class="card">
       <div class="row">
         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body cc-experience-header">
-            <p>March 2021 - Present</p>
+            <p data-i18n="filoblu.date">March 2021 - Present</p>
             <div class="h5">FiloBlu Spa</div>
           </div>
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
-            <div class="h5"><b>Customer Experience Specialist</b></div>
-            <p class="cc-role-group">Customer Support</p>
+            <div class="h5"><b data-i18n="filoblu.role">Customer Experience Specialist</b></div>
+            <p class="cc-role-group" data-i18n="filoblu.g1">Customer Support</p>
             <ul>
-              <li>
-                Managing end-to-end Customer Experience and Customer Service operations across the full order lifecycle — order management, shipping, customs, returns, refunds and post-purchase assistance.
-              </li>
-              <li>Delivering multichannel support via voice, email and live chat, ensuring a consistent and customer-centric experience across all touchpoints.
-              </li>
-              <li>Handling complex customer inquiries, complaints, escalations and service-related issues, identifying effective solutions while maintaining high service standards.
-              </li>
-              <li>Providing translation and multilingual support to facilitate effective communication with international customers and stakeholders.
-              </li>
+              <li data-i18n="filoblu.b1">Managing end-to-end Customer Experience and Customer Service operations across the full order lifecycle — order management, shipping, customs, returns, refunds and post-purchase assistance.</li>
+              <li data-i18n="filoblu.b2">Delivering multichannel support via voice, email and live chat, ensuring a consistent and customer-centric experience across all touchpoints.</li>
+              <li data-i18n="filoblu.b3">Handling complex customer inquiries, complaints, escalations and service-related issues, identifying effective solutions while maintaining high service standards.</li>
+              <li data-i18n="filoblu.b4">Providing translation and multilingual support to facilitate effective communication with international customers and stakeholders.</li>
             </ul>
-            <p class="cc-role-group">Marketplaces &amp; Payments</p>
+            <p class="cc-role-group" data-i18n="filoblu.g2">Marketplaces &amp; Payments</p>
             <ul>
-              <li>Managing customer service activities across major marketplaces, including Amazon and Zalando.
-              </li>
-              <li>Supporting payment operations and fraud-prevention activities, including payment verification, disputes and chargeback management across Klarna, PayPal and Adyen.
-              </li>
-              <li>Managing social media moderation and supporting web reputation management for selected brands, ensuring timely and appropriate responses to customer feedback and online interactions.
-              </li>
+              <li data-i18n="filoblu.b5">Managing customer service activities across major marketplaces, including Amazon and Zalando.</li>
+              <li data-i18n="filoblu.b6">Supporting payment operations and fraud-prevention activities, including payment verification, disputes and chargeback management across Klarna, PayPal and Adyen.</li>
+              <li data-i18n="filoblu.b7">Managing social media moderation and supporting web reputation management for selected brands, ensuring timely and appropriate responses to customer feedback and online interactions.</li>
             </ul>
-            <p class="cc-role-group">Reporting &amp; Process Improvement</p>
+            <p class="cc-role-group" data-i18n="filoblu.g3">Reporting &amp; Process Improvement</p>
             <ul>
-              <li>Preparing and analysing monthly performance reports, monitoring key activities and providing insights on the performance of assigned projects.
-              </li>
-              <li>Identifying recurring complaint drivers from monthly reporting and proposing process changes to reduce repeat contacts.
-              </li>
-              <li>Working closely with internal departments, Store Managers and brand teams to streamline processes, resolve operational issues and ensure a consistent brand experience.
-              </li>
+              <li data-i18n="filoblu.b8">Preparing and analysing monthly performance reports, monitoring key activities and providing insights on the performance of assigned projects.</li>
+              <li data-i18n="filoblu.b9">Identifying recurring complaint drivers from monthly reporting and proposing process changes to reduce repeat contacts.</li>
+              <li data-i18n="filoblu.b10">Working closely with internal departments, Store Managers and brand teams to streamline processes, resolve operational issues and ensure a consistent brand experience.</li>
             </ul>
           </div>
         </div>
@@ -181,29 +158,21 @@ recurring complaints into fixes rather than tickets.</p>
       <div class="row">
         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body cc-experience-header">
-            <p>October 2019 - August 2020</p>
+            <p data-i18n="argyll.date">October 2019 - August 2020</p>
             <div class="h5">The Argyll Club</div>
           </div>
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
-            <div class="h5"><b>Customer Relations Assistant</b></div>
+            <div class="h5"><b data-i18n="argyll.role">Customer Relations Assistant</b></div>
             <ul>
-              <li>
-                Reception service and providing a professional telephone answering service.
-              </li>
-              <li>Coordinate post, couriers and travel requirements for customers and the centre.
-              </li>
-              <li>Full secretarial and administrative support to customers as required.
-              </li>
-              <li>Ensuring all chargeable work is correctly and accurately logged and billed via Centre Vision billing platform.
-              </li>
-              <li>Handling all bookings for meeting rooms, equipment and catering requirements.
-              </li>
-              <li>Developing good working knowledge of the systems and any audio visual or video conferencing equipment.
-              </li>
-              <li>Liaising with the appropriate department to control repairs and maintenance of the building
-              </li>
+              <li data-i18n="argyll.b1">Reception service and providing a professional telephone answering service.</li>
+              <li data-i18n="argyll.b2">Coordinate post, couriers and travel requirements for customers and the centre.</li>
+              <li data-i18n="argyll.b3">Full secretarial and administrative support to customers as required.</li>
+              <li data-i18n="argyll.b4">Ensuring all chargeable work is correctly and accurately logged and billed via Centre Vision billing platform.</li>
+              <li data-i18n="argyll.b5">Handling all bookings for meeting rooms, equipment and catering requirements.</li>
+              <li data-i18n="argyll.b6">Developing good working knowledge of the systems and any audio visual or video conferencing equipment.</li>
+              <li data-i18n="argyll.b7">Liaising with the appropriate department to control repairs and maintenance of the building.</li>
             </ul>
           </div>
         </div>
@@ -213,22 +182,18 @@ recurring complaints into fixes rather than tickets.</p>
       <div class="row">
         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body cc-experience-header">
-            <p>August 2017 - August 2019</p>
+            <p data-i18n="enoteca.date">August 2017 - August 2019</p>
             <div class="h5">Enoteca Da Luca</div>
           </div>
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
-            <div class="h5"><b>Receptionist (Liverpool Street)</b></div>
+            <div class="h5"><b data-i18n="enoteca.role">Receptionist (Liverpool Street)</b></div>
             <ul>
-              <li>Welcoming and greeting customers
-              </li>
-              <li>Taking reservations by phone, email, and walk-ins
-              </li>
-              <li>Taking care of the organisation of parties and events for bigger groups
-              </li>
-              <li>Cash handling
-              </li>
+              <li data-i18n="enoteca.b1">Welcoming and greeting customers.</li>
+              <li data-i18n="enoteca.b2">Taking reservations by phone, email, and walk-ins.</li>
+              <li data-i18n="enoteca.b3">Taking care of the organisation of parties and events for bigger groups.</li>
+              <li data-i18n="enoteca.b4">Cash handling.</li>
             </ul>
           </div>
         </div>
@@ -238,29 +203,21 @@ recurring complaints into fixes rather than tickets.</p>
       <div class="row">
         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body cc-experience-header">
-            <p>March 2014 - July 2017</p>
+            <p data-i18n="shoe.date">March 2014 - July 2017</p>
             <div class="h5">The Natural Shoe Store</div>
           </div>
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
-            <div class="h5"><b>Retail Assistant Manager</b></div>
+            <div class="h5"><b data-i18n="shoe.role">Retail Assistant Manager</b></div>
             <ul>
-              <li>
-                Providing Customer Assistance in the shop and over the phone.
-              </li>
-              <li>Responsible for window display and shop standards.
-              </li>
-              <li>Key Holder.
-              </li>
-              <li>Till duties, cashing up, banking, reporting the figures to the head office.
-              </li>
-              <li>Managing orders and stock.
-              </li>
-              <li>Leading the team.
-              </li>
-              <li>Solving problems.
-              </li>
+              <li data-i18n="shoe.b1">Providing customer assistance in the shop and over the phone.</li>
+              <li data-i18n="shoe.b2">Responsible for window display and shop standards.</li>
+              <li data-i18n="shoe.b3">Key holder.</li>
+              <li data-i18n="shoe.b4">Till duties, cashing up, banking, reporting the figures to the head office.</li>
+              <li data-i18n="shoe.b5">Managing orders and stock.</li>
+              <li data-i18n="shoe.b6">Leading the team.</li>
+              <li data-i18n="shoe.b7">Solving problems.</li>
             </ul>
           </div>
         </div>
@@ -270,19 +227,16 @@ recurring complaints into fixes rather than tickets.</p>
       <div class="row">
         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body cc-experience-header">
-            <p>July 2012 - March 2014</p>
-            <div class="h5">Freelancer Tourist Guide</div>
+            <p data-i18n="guide.date">July 2012 - March 2014</p>
+            <div class="h5" data-i18n="guide.company">Freelance Tourist Guide</div>
           </div>
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
-            <div class="h5"><b>Tourist Guide</b></div>
+            <div class="h5"><b data-i18n="guide.role">Tourist Guide</b></div>
             <ul>
-              <li>
-                Organisation of tours for individuals or groups.
-              </li>
-              <li>Booking meals at restaurants and booking visits to museums and monuments.
-              </li>
+              <li data-i18n="guide.b1">Organisation of tours for individuals or groups.</li>
+              <li data-i18n="guide.b2">Booking meals at restaurants and booking visits to museums and monuments.</li>
             </ul>
           </div>
         </div>
@@ -292,21 +246,17 @@ recurring complaints into fixes rather than tickets.</p>
       <div class="row">
         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body cc-experience-header">
-            <p>October 2009 - March 2012</p>
-            <div class="h5">Fencing Club "A. Di Ciolo"</div>
+            <p data-i18n="fencing.date">October 2009 - March 2012</p>
+            <div class="h5" data-i18n="fencing.company">Fencing Club "A. Di Ciolo"</div>
           </div>
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
-            <div class="h5"><b>Secretary</b></div>
+            <div class="h5"><b data-i18n="fencing.role">Secretary</b></div>
             <ul>
-              <li>
-                Receptionist duties. 
-              </li>
-              <li>Collecting memberships fares.
-              </li>
-              <li>Competitions and athletes' logistic bookings.
-              </li>
+              <li data-i18n="fencing.b1">Receptionist duties.</li>
+              <li data-i18n="fencing.b2">Collecting membership fees.</li>
+              <li data-i18n="fencing.b3">Competitions and athletes' logistic bookings.</li>
             </ul>
           </div>
         </div>
@@ -316,24 +266,20 @@ recurring complaints into fixes rather than tickets.</p>
 </div>
 <div class="section" id="education">
   <div class="container cc-experience">
-    <div class="h4 text-center mb-4 title">Education</div>
+    <div class="h4 text-center mb-4 title" data-i18n="edu.title">Education</div>
     <div class="card">
       <div class="row">
         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body cc-experience-header">
-            <div class="h5">Courses & Certificates</div>
+            <div class="h5" data-i18n="edu.courses">Courses &amp; Certificates</div>
           </div>
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
             <ul>
-              <li>
-                <b>Tourist Guide Certificate</b>, Pisa, Italy (final grade 85/100).
-              </li>
-              <li><b>Degree in Foreign Languages</b>, Venice, Italy (final grade 72/100).
-              </li>
-              <li><b>DELE (Spanish degree), Level B2 Advanced</b> (final grade 90.33/100).
-              </li>
+              <li data-i18n="edu.i1"><b>Tourist Guide Certificate</b>, Pisa, Italy (final grade 85/100).</li>
+              <li data-i18n="edu.i2"><b>Degree in Foreign Languages</b>, Venice, Italy (final grade 72/100).</li>
+              <li data-i18n="edu.i3"><b>DELE (Spanish degree), Level B2 Advanced</b> (final grade 90.33/100).</li>
             </ul>
           </div>
         </div>
@@ -343,43 +289,43 @@ recurring complaints into fixes rather than tickets.</p>
 </div>
 <div class="section" id="skills">
   <div class="container">
-    <div class="h4 text-center mb-4 title">Skills</div>
+    <div class="h4 text-center mb-4 title" data-i18n="skills.title">Skills</div>
     <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <div class="card-body">
         <div class="row">
           <div class="col-md-4">
-            <div class="h6 cc-skill-group">Customer Experience</div>
+            <div class="h6 cc-skill-group" data-i18n="skills.g1">Customer Experience</div>
             <div class="cc-tags">
-              <span class="cc-tag">Order Management</span>
-              <span class="cc-tag">Returns &amp; Refunds</span>
-              <span class="cc-tag">Shipping &amp; Customs</span>
-              <span class="cc-tag">Escalation Management</span>
-              <span class="cc-tag">Complaint Handling</span>
-              <span class="cc-tag">Voice, Email &amp; Live Chat</span>
-              <span class="cc-tag">Post-purchase Support</span>
+              <span class="cc-tag" data-i18n="skills.a1">Order Management</span>
+              <span class="cc-tag" data-i18n="skills.a2">Returns &amp; Refunds</span>
+              <span class="cc-tag" data-i18n="skills.a3">Shipping &amp; Customs</span>
+              <span class="cc-tag" data-i18n="skills.a4">Escalation Management</span>
+              <span class="cc-tag" data-i18n="skills.a5">Complaint Handling</span>
+              <span class="cc-tag" data-i18n="skills.a6">Voice, Email &amp; Live Chat</span>
+              <span class="cc-tag" data-i18n="skills.a7">Post-purchase Support</span>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="h6 cc-skill-group">Marketplaces &amp; Payments</div>
+            <div class="h6 cc-skill-group" data-i18n="skills.g2">Marketplaces &amp; Payments</div>
             <div class="cc-tags">
               <span class="cc-tag">Amazon</span>
               <span class="cc-tag">Zalando</span>
               <span class="cc-tag">Klarna</span>
               <span class="cc-tag">PayPal</span>
               <span class="cc-tag">Adyen</span>
-              <span class="cc-tag">Chargebacks &amp; Disputes</span>
-              <span class="cc-tag">Fraud Prevention</span>
+              <span class="cc-tag" data-i18n="skills.b6">Chargebacks &amp; Disputes</span>
+              <span class="cc-tag" data-i18n="skills.b7">Fraud Prevention</span>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="h6 cc-skill-group">Operations &amp; Communication</div>
+            <div class="h6 cc-skill-group" data-i18n="skills.g3">Operations &amp; Communication</div>
             <div class="cc-tags">
-              <span class="cc-tag">Performance Reporting</span>
-              <span class="cc-tag">Process Improvement</span>
-              <span class="cc-tag">Social Media Moderation</span>
-              <span class="cc-tag">Web Reputation Management</span>
-              <span class="cc-tag">Translation &amp; Localisation</span>
-              <span class="cc-tag">Cross-team Collaboration</span>
+              <span class="cc-tag" data-i18n="skills.c1">Performance Reporting</span>
+              <span class="cc-tag" data-i18n="skills.c2">Process Improvement</span>
+              <span class="cc-tag" data-i18n="skills.c3">Social Media Moderation</span>
+              <span class="cc-tag" data-i18n="skills.c4">Web Reputation Management</span>
+              <span class="cc-tag" data-i18n="skills.c5">Translation &amp; Localisation</span>
+              <span class="cc-tag" data-i18n="skills.c6">Cross-team Collaboration</span>
             </div>
           </div>
         </div>
@@ -389,34 +335,34 @@ recurring complaints into fixes rather than tickets.</p>
 </div>
 <div class="section" id="skill">
   <div class="container">
-    <div class="h4 text-center mb-4 title">Languages</div>
+    <div class="h4 text-center mb-4 title" data-i18n="lang.title">Languages</div>
     <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <div class="card-body">
         <div class="row">
           <div class="col-md-6">
             <div class="cc-lang">
-              <span class="cc-lang-name">Italian</span>
-              <span class="cc-lang-level">Native <span class="cc-cefr">C2</span></span>
+              <span class="cc-lang-name" data-i18n="lang.italian">Italian</span>
+              <span class="cc-lang-level"><span data-i18n="lang.native">Native</span> <span class="cc-cefr">C2</span></span>
             </div>
           </div>
           <div class="col-md-6">
             <div class="cc-lang">
-              <span class="cc-lang-name">English</span>
-              <span class="cc-lang-level">Fluent <span class="cc-cefr">C1</span></span>
+              <span class="cc-lang-name" data-i18n="lang.english">English</span>
+              <span class="cc-lang-level"><span data-i18n="lang.fluent">Fluent</span> <span class="cc-cefr">C1</span></span>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6">
             <div class="cc-lang">
-              <span class="cc-lang-name">Spanish</span>
-              <span class="cc-lang-level">Fluent <span class="cc-cefr">DELE B2</span></span>
+              <span class="cc-lang-name" data-i18n="lang.spanish">Spanish</span>
+              <span class="cc-lang-level"><span data-i18n="lang.fluent">Fluent</span> <span class="cc-cefr">DELE B2</span></span>
             </div>
           </div>
           <div class="col-md-6">
             <div class="cc-lang">
-              <span class="cc-lang-name">French</span>
-              <span class="cc-lang-level">Beginner <span class="cc-cefr">A2</span></span>
+              <span class="cc-lang-name" data-i18n="lang.french">French</span>
+              <span class="cc-lang-level"><span data-i18n="lang.beginner">Beginner</span> <span class="cc-cefr">A2</span></span>
             </div>
           </div>
         </div>
@@ -428,15 +374,27 @@ recurring complaints into fixes rather than tickets.</p>
     </div>
     <footer class="footer">
       <div class="text-center text-muted">
-        <p>&copy; <span id="year"></span> Silvia Numa.<br>Design - <a class="credit" href="https://templateflip.com" target="_blank" rel="noopener">TemplateFlip</a></p>
-        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+        <p>&copy; <span id="year"></span> Silvia Numa.<br><span data-i18n="footer.design">Design</span> - <a class="credit" href="https://templateflip.com" target="_blank" rel="noopener">TemplateFlip</a></p>
       </div>
     </footer>
+    <script>
+      (function () {
+        // Birth date: 16 February 1990 (month is 0-indexed in JS).
+        var bday = new Date(1990, 1, 16);
+        var now = new Date();
+        var age = now.getFullYear() - bday.getFullYear();
+        var monthDiff = now.getMonth() - bday.getMonth();
+        if (monthDiff < 0 || (monthDiff === 0 && now.getDate() < bday.getDate())) age--;
+        document.getElementById('age').textContent = age;
+        document.getElementById('year').textContent = now.getFullYear();
+      })();
+    </script>
     <script src="js/core/jquery.3.2.1.min.js"></script>
     <script src="js/core/popper.min.js"></script>
     <script src="js/core/bootstrap.min.js"></script>
     <script src="js/now-ui-kit.js?v=1.1.0"></script>
     <script src="js/aos.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="scripts/i18n.js"></script>
   </body>
 </html>
