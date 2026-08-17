@@ -7092,15 +7092,19 @@ Created using IcoMoon - icomoon.io
 
 .cc-profile-image a {
   position: relative;
+  display: inline-block;
+  line-height: 0;
 }
 
 .cc-profile-image a:before {
   content: "";
   border: 15px solid rgba(55, 140, 63, 0.6);
   border-radius: 50%;
-  height: 180px;
-  width: 180px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
   position: absolute;
+  top: 0;
   left: 0;
   -webkit-animation: pulsate 1.6s ease-out;
           animation: pulsate 1.6s ease-out;
@@ -7435,10 +7439,17 @@ img {
     min-height: 78vh;
   }
 
+  /* Shrink the photo and its pulsing ring together, and keep the border
+     proportional — otherwise the ring stays desktop-sized and sits off-centre. */
   .cc-profile-image img {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
+    border-width: 10px;
     object-fit: cover;
+  }
+
+  .cc-profile-image a:before {
+    border-width: 10px;
   }
 
   .content-center .h2.title {
