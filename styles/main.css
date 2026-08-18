@@ -7548,3 +7548,193 @@ img {
     font-size: .9rem;
   }
 }
+
+/* ==========================================================================
+   Refinement layer — tighter spacing, layout fixes, smoother transitions.
+   Keeps the template's palette and structure.
+   ========================================================================== */
+
+/* --- Navbar: brand and language pills on one row --- */
+.navbar-translate {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar .navbar-brand {
+  font-size: .8rem;
+  letter-spacing: .13em;
+}
+
+/* The scrolled navbar is green, not white, so the switcher stays light in
+   both states. (Earlier this went teal-on-green and became unreadable.) */
+.navbar:not(.navbar-transparent) .cc-lang-switch {
+  border-color: rgba(255, 255, 255, .55);
+}
+
+.navbar:not(.navbar-transparent) .cc-lang-switch button {
+  color: #fff;
+}
+
+.navbar:not(.navbar-transparent) .cc-lang-switch button + button {
+  border-left-color: rgba(255, 255, 255, .35);
+}
+
+.navbar:not(.navbar-transparent) .cc-lang-switch button.active {
+  background-color: #fff;
+  color: #2f6b46;
+}
+
+/* --- Hero: shorter, with the social row clear of the seam --- */
+.page-header.page-header-small {
+  min-height: 560px;
+}
+
+.page-header .content-center .h2.title {
+  margin-bottom: 1.5rem;
+}
+
+.page-header .section {
+  padding: 0 0 34px;
+}
+
+.page-header .btn-primary {
+  border-radius: 999px;
+  padding: .8rem 1.8rem;
+  font-size: .85rem;
+  letter-spacing: .01em;
+  text-transform: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .18);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.page-header .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .26);
+}
+
+.button-container .btn-icon {
+  background-color: rgba(255, 255, 255, .16) !important;
+  border: 1px solid rgba(255, 255, 255, .4) !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  transition: background-color .2s ease, transform .2s ease;
+}
+
+.button-container .btn-icon:hover {
+  background-color: rgba(255, 255, 255, .3) !important;
+  transform: translateY(-2px);
+}
+
+/* --- Tighter vertical rhythm --- */
+.section {
+  padding: 48px 0;
+}
+
+.section .h4.title.text-center {
+  margin-bottom: 1.5rem !important;
+}
+
+.card {
+  margin-bottom: 1.25rem;
+}
+
+.card-body {
+  padding: 1.6rem 1.75rem;
+}
+
+/* --- Experience: centre the date/company block in its green column --- */
+.cc-experience .card > .row > .col-md-3.bg-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cc-experience-header {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.cc-experience-header p {
+  margin-bottom: .3rem;
+}
+
+.card-body li {
+  margin-bottom: .35rem;
+  line-height: 1.55;
+}
+
+.card-body ul + .cc-role-group {
+  margin-top: 1.1rem;
+}
+
+/* --- Motion --- */
+.cc-experience .card,
+#skills .card,
+#skill .card {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.cc-experience .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(16, 24, 40, .1);
+}
+
+.cc-tag {
+  transition: transform .18s ease, border-color .18s ease, background-color .18s ease;
+}
+
+.cc-tag:hover {
+  transform: translateY(-1px);
+  border-color: rgba(47, 158, 115, .7);
+  background-color: rgba(47, 158, 115, .14);
+}
+
+.nav-link,
+.footer a,
+#about .col-sm-8 a {
+  transition: opacity .18s ease, color .18s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* --- Mobile --- */
+@media (max-width: 767px) {
+  .section { padding: 34px 0; }
+  .card-body { padding: 1.2rem 1.25rem; }
+  .page-header.page-header-small { min-height: 480px; }
+  .page-header .section { padding: 0 0 24px; }
+
+  /* Green band hugs its text instead of centring in a tall empty block. */
+  .cc-experience .card > .row > .col-md-3.bg-primary {
+    display: block;
+  }
+
+  .cc-experience-header {
+    padding: .9rem 1.25rem;
+  }
+
+  .cc-experience-header p {
+    font-size: .74rem;
+    letter-spacing: .05em;
+  }
+
+  .cc-experience-header .h5 {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .card-body li { font-size: .9rem; }
+  .section .h4.title.text-center { font-size: 1.35rem; }
+  .cc-experience .card:hover { transform: none; }
+}
